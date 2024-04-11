@@ -1,3 +1,5 @@
+/* Variables */
+
 /* Variable constante */
 const nameStudent = "¡Hola UPB!"
 /* No se puede cambiar el valor de una constante */
@@ -48,3 +50,59 @@ console.log("Propiedad del Objeto: ", objeto.nombre);
 int = "25"
 console.log("Entero: ", int);
 console.log("Tipo de Entero: ", typeof(int));
+
+
+/* Funciones */
+
+/* Diferentes formas de declarar una función */
+
+/* Forma 1: con la palabra reservada function */
+function declaracionUno () {
+  console.log("Forma 1 de declarar una función");
+}
+
+declaracionUno()
+
+/* Forma 2: usando función flecha */
+const declaracionDos = () => {
+  console.log("Forma 2 de declarar una función");
+}
+
+declaracionDos()
+
+/* Sin parámetros y con parámetros */
+
+/* Sin parámetros */
+const sinParametros = () => {
+  console.log("Función sin parámetros");
+}
+
+sinParametros()
+
+/* Recibiendo parámetros */
+const conParametros = (esUna, queRecibe="parámetros") => {
+  console.log(esUna + " que recibe " + queRecibe);
+}
+const parametros = "parámetros"
+conParametros("Función", parametros)
+conParametros("Función")
+
+/* Función que retorna un valor */
+const funcionSumaQueRetorna = (a, b) => {
+  return a + b;
+} 
+const resultado = funcionSumaQueRetorna(1,2)
+console.log(resultado);
+
+
+/* Funciones anónimas */
+
+/* Con la palabra function */
+setTimeout(function() {
+  console.log('¡Hola! Esto es después de 2 segundos.');
+}, 2000);
+
+/* Función anónima tipo flecha */
+setTimeout(() => {
+  console.log('¡Hola! Esto es después de 2 segundos.');
+}, 2000);
